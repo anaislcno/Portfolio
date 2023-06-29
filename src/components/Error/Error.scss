@@ -1,0 +1,53 @@
+$MainColor : #FF6060;
+$SecondColor : white;
+
+.error {
+    margin: 160px 20px 0px 20px;
+    color: $MainColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 376px) {
+        margin-top: 190px;   
+    }
+
+    .error__img {
+        width: clamp(200px, 100%, 600px);
+
+        @media screen and (max-width: 376px) {
+            width: 200px;
+            height: 100px;
+        }
+    }
+
+    .error__title {
+        // font-size: 36px;
+        font-size: clamp(1.125rem, 0.7274rem + 1.6917vw, 2.25rem);
+        margin-top: 65px;
+        text-align: center;
+
+        @media screen and (max-width: 376px) {
+            font-size: 18px;
+            margin: 10px 55px 0px 55px;
+        }
+    }
+
+    
+
+    .error__text {
+        font-size: 18px;
+        margin-top: 180px;
+        text-decoration: none;
+        color: $MainColor;
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 376px) {
+            font-size: 12px;
+            margin-top: 130px;
+        }
+    }
+} 

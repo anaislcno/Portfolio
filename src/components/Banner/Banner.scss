@@ -1,0 +1,49 @@
+$MainColor : #FF6060;
+$SecondColor : white;
+
+
+.banner {
+    margin: 60px 0px 40px 0px;
+    // font-size: 48px;
+    font-size: clamp(1.5rem, 0.9699rem + 2.2556vw, 3rem);
+    color: $SecondColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+        margin: 20px;
+        font-size: 24px;
+    }
+
+    .banner__img {
+        object-fit: cover;
+        position: relative;
+        filter: brightness(70%);
+        height: 225px;
+        width: 100%;
+        border-radius: 25px;
+
+        @media screen and (max-width: 480px) {
+        width: 335px;
+        height: 110px;
+        border-radius: 10px;
+        }
+    }
+    
+    .banner__text {
+        top: 260px;
+        position: absolute;
+        align-self: center;
+
+        @media screen and (min-width: 480px) and (max-width: 768px)  {
+            top: 190px;
+        }
+
+        @media screen and (max-width: 480px) {
+        top: 120px;
+        // left: 40px;
+        inline-size: 225px;
+        }
+    }
+}

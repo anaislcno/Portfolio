@@ -1,0 +1,39 @@
+$MainColor : #FF6060;
+$SecondColor : white;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 100px 0px 100px;
+    font-size: 24px;
+
+    @media screen and (max-width: 768px) {
+        margin: 20px 20px 0px 20px;
+        font-size: 12px;
+        text-transform: uppercase;;
+
+        .header__logo {
+        height: 45px;
+        }
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    gap: 55px;
+
+    @media screen and (max-width: 768px) {
+        gap: 10px;
+    }
+
+    .navbar__link {
+        text-decoration: none;
+        color: $MainColor;
+    }
+
+    .active {
+        text-decoration: underline;
+    }
+}
