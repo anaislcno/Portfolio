@@ -1,20 +1,35 @@
-$MainColor : #FF6060;
-$SecondColor : white;
+// $MainColor : #FF6060;
+// $SecondColor : white;
 
 .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    gap: 30px;
-    color: $SecondColor;
+    background-color:burlywood;
+    gap: 10px;
+    color: white;
     max-width: 100%;
-    height: 200px;
+    height: 150px;
     margin-top: 50px;
 
+    .footer_icons {
+        display: flex;
+        align-items:end;
+        gap: 5px;
+
+        .icon {
+            color: white;
+            font-size: 30px;
+        }
+
+        .icon_logo {
+            margin-left: -5px;
+        }
+    }
+
     .footer__text {
-        font-size: 24px;
+        font-size: 20px;
 
         @media screen and (max-width: 480px) {
             font-size: 12px;
