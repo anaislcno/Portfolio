@@ -1,9 +1,9 @@
-$MainColor : #FF6060;
-$SecondColor : white;
+// $MainColor : #FF6060;
+// $SecondColor : white;
 
 .error {
     margin: 160px 20px 0px 20px;
-    color: $MainColor;
+    color:burlywood;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,9 +37,10 @@ $SecondColor : white;
 
     .error__text {
         font-size: 18px;
-        margin-top: 180px;
+        margin-top: 110px;
         text-decoration: none;
-        color: $MainColor;
+        color:burlywood;
+        
         &:hover {
             text-decoration: underline;
             cursor: pointer;

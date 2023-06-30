@@ -1,10 +1,11 @@
+import { NavLink } from 'react-router-dom'
 import Logo from '../../assets/logo.svg'
 import '../Footer/Footer.scss'
 
 function Footer() {
   return (
     <footer className='footer'>
-        <div className='footer_icons'>
+        <div className='footer__icons'>
         <a
           className='icon'
           href="https://github.com/anaislcno"
@@ -14,7 +15,9 @@ function Footer() {
         >
           <i class='fab fa-github' />
         </a>
-        <img src={Logo} alt='' className='icon_logo' />
+        <NavLink to="/">
+            <img src={Logo} alt='Logo' className='icon__logo'/>
+        </NavLink>
         <a
           className='icon'
           href="https://www.linkedin.com/in/lemire-anais/"

@@ -1,0 +1,39 @@
+.home {
+    background-image: url(../../assets/backgroundtest2.jpg);
+    background-size: cover;
+
+    .welcome {
+        margin-top: 50px ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .welcome__infos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+
+            .welcome__title {
+                margin-bottom: 25px;
+                font-size: 50px;
+                font-weight: 400;
+            }
+        }
+
+        .links {
+            margin: 50px 0px 50px 0px;
+            display: flex;
+            gap: 30px;
+
+            .links__unit {
+                border: 1px solid rgba(248, 198, 157, 0.6);
+                background-color: rgba(248, 198, 157, 0.6);
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 30px;
+                color: white;
+            }
+        }
+    }
+}

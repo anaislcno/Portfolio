@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
+// import Header from "./components/Header";
+import Welcome from "./components/Welcome";
 import Home from "./pages/Home";
-// import Error from "./components/Error";
+import Error from "./components/Error";
 import Footer from "./components/Footer";
 import "./index.scss";
 
@@ -11,10 +12,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <Header />
+      <Welcome />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="*" element={<Error />} /> */}
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </Router>
