@@ -1,0 +1,20 @@
+.about {
+    color: #C06D77;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+
+    .about__title {
+        margin-top: 50px;
+        font-weight: 400;
+        font-size: 35px;
+    }
+
+    .about__text {
+        margin: 50px 0px 50px 0px;
+        width: 75%;
+        line-height: 25px;
+    }
+}
