@@ -16,9 +16,6 @@ function Welcome() {
           <NavLink className='links__unit' to="/">Me contacter</NavLink>
         </div>
       </div>
-      <div>
-          <p>FUTURE TRANSITION ICI????</p>
-      </div>
     </div>
   )
 }

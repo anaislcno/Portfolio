@@ -1,6 +1,13 @@
+import About from "../../components/About"
+import Works from "../../components/Works"
+import "./Home.scss"
+
 function Home() {
   return (
-<div></div>
+    <div>
+        <About />
+        <Works />
+    </div>
   )
 }
 

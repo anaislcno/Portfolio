@@ -2,6 +2,14 @@
     background-image: url(../../assets/backgroundtest2.jpg);
     background-size: cover;
 
+    --mask:
+    radial-gradient(223.61px at 50% calc(100% - 300.00px),#000 99%,#0000 101%) calc(50% - 200px) 0/400px 100%,
+    radial-gradient(223.61px at 50% calc(100% + 200.00px),#0000 99%,#000 101%) 50% calc(100% - 100px)/400px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+
+    padding-bottom: 150px;
+
     .welcome {
         margin-top: 100px ;
         display: flex;
@@ -49,7 +57,7 @@
 
     p {
         background-color: #f8c69d;
-        padding: 40px;
+        padding: 10px;
     }
 }
 
