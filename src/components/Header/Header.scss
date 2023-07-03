@@ -37,3 +37,13 @@
         font-weight: 400;
     }
 }
+
+#root:has(.error404) {
+
+.header__border {
+    border-bottom: 2px solid #f8c69d;
+}
+    .navbar__link {
+        color: #f8c69d;
+    }
+}

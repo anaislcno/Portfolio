@@ -37,3 +37,14 @@
         }
     }
 }
+
+#root:has(.error404) {
+
+    .home {
+        background-image: none;
+        
+        .welcome {
+            display: none;
+        }
+    }
+}

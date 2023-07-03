@@ -1,9 +1,9 @@
 // $MainColor : #FF6060;
 // $SecondColor : white;
 
-.error {
-    margin: 160px 20px 0px 20px;
-    color:burlywood;
+.error404 {
+    margin: 150px 20px 0px 20px;
+    color: #f8c69d;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,13 +33,11 @@
         }
     }
 
-    
-
     .error__text {
         font-size: 18px;
-        margin-top: 110px;
+        margin: 90px 0px 50px 0px;
         text-decoration: none;
-        color:burlywood;
+        color: #f8c69d;
         
         &:hover {
             text-decoration: underline;
