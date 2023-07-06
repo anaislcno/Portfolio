@@ -10,10 +10,10 @@ function Header() {
           <img src={Logo} alt='Logo' className='header__logo'/>
         </NavLink>
       <nav className='navbar'>
-        <NavLink className='navbar__link' to="/">À PROPOS</NavLink>
-        <NavLink className='navbar__link' to="/">COMPÉTENCES</NavLink>
-        <NavLink className='navbar__link' to="/">RÉALISATIONS</NavLink>
-        <NavLink className='navbar__link' to="/">CONTACT</NavLink>
+        <a href='#about' className='navbar__link'>À PROPOS</a>
+        <a href='#competences' className='navbar__link'>COMPÉTENCES</a>
+        <a href='#works' className='navbar__link'>RÉALISATIONS</a>
+        <a href='#contact' className='navbar__link'>CONTACT</a>
       </nav>
       </div>
     </header>
