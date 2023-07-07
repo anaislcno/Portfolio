@@ -1,20 +1,9 @@
-.container__wave {
-    max-width: 100%;
-    background-image: url(../../assets/backgroundtest.jpg);
-    background-size: cover;
 
-    --mask:
-    radial-gradient(178.89px at 50% 240.00px,#000 99%,#0000 101%) calc(50% - 160px) 0/320px 100%,
-    radial-gradient(178.89px at 50% -160px,#0000 99%,#000 101%) 50% 80px/320px 100% repeat-x;
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
-
-    padding-top: 140px;
 
     .works {
         // background-color: rgba($color: white, $alpha: 0.5);
         // border-radius: 30%;
-        color: white;
+        color: black;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -33,4 +22,3 @@
             line-height: 25px;
         }
     }
-}

@@ -24,7 +24,7 @@
 }
 
 .arrow {
-  background-color: #fff;
+  color: white;
   position: absolute;
   cursor: pointer;
   z-index: 10;
@@ -35,7 +35,7 @@
 }
 
 .arrow svg:hover {
-  color: #68edff;
+  color: rgba($color: #C06D77, $alpha: 0.5);
 }
 
 .next {
@@ -46,4 +46,9 @@
 .prev {
   left: 0%;
   top: 50%;
+}
+
+.card__container {
+  padding: 20px 0px;
+  margin: 10px 0px;
 }

@@ -1,0 +1,12 @@
+.card {
+    padding: 30px;
+    box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    background-color: white;
+
+    .card__img {
+        width: 200px;
+    }
+}

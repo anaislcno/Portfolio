@@ -1,13 +1,27 @@
 import "./Slider.scss";
 import { useState } from "react";
 import Slider from "react-slick";
-import astronaut from "../../assets/astronaut.png";
-import celebrating from "../../assets/celebrating.png";
-import education from "../../assets/education.png";
-import taken from "../../assets/taken.png";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { FrontCard, BackCard, ToolsCard, SeoCard } from "../Cards";
 
-const images = [astronaut, celebrating, education, taken];
+const cards = [
+  {
+    title: "Frontend",
+    component: <FrontCard />,
+  },
+  {
+    title: "Backend",
+    component: <BackCard />,
+  },
+  {
+    title: "Outils",
+    component: <ToolsCard />,
+  },
+  {
+    title: "SEO",
+    component: <SeoCard />,
+  },
+];
 
 function CompetencesSlider() {
   const NextArrow = ({ onClick }) => {
@@ -26,7 +40,7 @@ function CompetencesSlider() {
     );
   };
 
-  const [imageIndex, setImageIndex] = useState(0);
+  const [cardIndex, setImageIndex] = useState(0);
 
   const settings = {
     infinite: true,
@@ -43,10 +57,13 @@ function CompetencesSlider() {
   return (
     <div className="App">
       <Slider {...settings}>
-        {images.map((img, idx) => (
-          <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-            <img src={img} alt={img} />
+        {cards.map((card, idx) => (
+        <div className="card__container">
+          {/* <h3>{card.title}</h3> */}
+          <div className={idx === cardIndex ? "slide activeSlide" : "slide"} key={idx}>
+            {card.component}
           </div>
+        </div>
         ))}
       </Slider>
     </div>
