@@ -1,16 +1,16 @@
 import React from "react";
 import "../Cards/Cards.scss"
-import astronaut from "../../assets/astronaut.png";
-import celebrating from "../../assets/celebrating.png";
-import education from "../../assets/education.png";
-import taken from "../../assets/taken.png";
+import frontImg from "../../assets/front.svg";
+import backImg from "../../assets/back.svg";
+import toolsImg from "../../assets/tools.svg";
+import seoImg from "../../assets/seo.svg";
 
 const FrontCard = () => {
   return (
     <div className="card">
-      <h2>Frontend</h2>
-      <img className="card__img" src={astronaut} alt="Astronaut" />
-      <h3>Langages :</h3>
+      <h2 className="card__title">Frontend</h2>
+      <img className="card__img" src={frontImg} alt="Astronaut" />
+      <h3 className="card__text">Langages :</h3>
       <ul className="techno__list">
         <li className="techno__item">HTML</li>
         <li className="techno__item">CSS</li>
@@ -25,9 +25,9 @@ const FrontCard = () => {
 const BackCard = () => {
   return (
     <div className="card">
-      <h2>Backend</h2>
-      <img className="card__img" src={celebrating} alt="Celebrating" />
-      <h3>Langages et outils:</h3>
+      <h2 className="card__title">Backend</h2>
+      <img className="card__img" src={backImg} alt="Celebrating" />
+      <h3 className="card__text">Langages et outils:</h3>
       <ul className="techno__list">
         <li className="techno__item">Node.js</li>
         <li className="techno__item">MongoDB</li>
@@ -40,9 +40,9 @@ const BackCard = () => {
 const ToolsCard = () => {
   return (
     <div className="card">
-      <h2>Outils</h2>
-      <img className="card__img" src={education} alt="Education" />
-      <h3>Outils:</h3>
+      <h2 className="card__title">Outils</h2>
+      <img className="card__img" src={toolsImg} alt="Education" />
+      <h3 className="card__text">Outils:</h3>
       <ul className="techno__list">
         <li className="techno__item">Figma</li>
         <li className="techno__item">GitHub</li>
@@ -56,9 +56,9 @@ const ToolsCard = () => {
 const SeoCard = () => {
   return (
     <div className="card">
-      <h2>SEO</h2>
-      <img className="card__img" src={taken} alt="Taken" />
-      <h3>Que dire:</h3>
+      <h2 className="card__title">SEO</h2>
+      <img className="card__img" src={seoImg} alt="Taken" />
+      <h3 className="card__text">Services:</h3>
       <ul className="techno__list">
         <li className="techno__item">Référencement</li>
         <li className="techno__item">Optimisation</li>

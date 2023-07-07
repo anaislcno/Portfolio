@@ -1,14 +1,30 @@
+$MainColor : #C06D77;
+$SecondColor : white;
+$BackColor : #F8C69D;
+$DarkColor : #A45E56;
+
 .card {
-    padding: 30px 10px 20px 10px;
-    box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.5);
+    padding: 20px 10px 10px 10px;
+    box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.7);
+    -moz-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.7);
     border-radius: 20px;
     background-color: white;
     width: 300px;
+    color: $DarkColor;
+
+    .card__title {
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .card__text {
+        margin-top: 10px;
+    }
 
     .card__img {
         width: 200px;
+        height: 180px;
     }
 
     .techno__list {
@@ -19,7 +35,7 @@
 
         .techno__item {
             list-style-type: none;
-            background-color: #C06D77;
+            background-color: rgba($color: $MainColor, $alpha: 0.8);
             border: 1.5px solid white;
             color: white;
             padding: 0.3125rem 1rem 0.25rem;
