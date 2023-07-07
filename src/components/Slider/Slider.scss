@@ -2,7 +2,8 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .App {
-  width: 50%;
+  width: 60%;
+  margin: auto;
 //   margin: 10rem auto;
 //   height: 500px;
 }
@@ -28,14 +29,21 @@
   position: absolute;
   cursor: pointer;
   z-index: 10;
+  box-shadow: 2px 2px 20px 5px rgba(0,0,0,1);
+    -webkit-box-shadow: 2px 2px 20px 5px rgba(0,0,0,1);
+    -moz-box-shadow: 2px 2px 20px 5px rgba(0,0,0,1);
+    border-radius: 50px;
+  height: 25px;
+  padding: 3px;
+  width: 25px;
 }
 
 .arrow svg {
   transition: color 300ms;
 }
 
-.arrow svg:hover {
-  color: rgba($color: #C06D77, $alpha: 0.5);
+.arrow:hover {
+  background-color: rgba($color: white, $alpha: 0.2);
 }
 
 .next {
@@ -50,5 +58,5 @@
 
 .card__container {
   padding: 20px 0px;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }

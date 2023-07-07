@@ -1,12 +1,33 @@
 .card {
-    padding: 30px;
-    box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.5);
+    padding: 30px 10px 20px 10px;
+    box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.5);
     border-radius: 20px;
     background-color: white;
+    width: 300px;
 
     .card__img {
         width: 200px;
+    }
+
+    .techno__list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 20px;
+
+        .techno__item {
+            list-style-type: none;
+            background-color: #C06D77;
+            border: 1.5px solid white;
+            color: white;
+            padding: 0.3125rem 1rem 0.25rem;
+            margin-right: 6px;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
     }
 }
