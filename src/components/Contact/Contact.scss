@@ -1,0 +1,81 @@
+$MainColor : #C06D77;
+$SecondColor : white;
+$BackColor : #F8C69D;
+$DarkColor : #A45E56;
+
+.contact {
+    color: $DarkColor;
+    font-weight: 400;
+    padding: 50px 150px 50px 150px ;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: rgba($color: $BackColor, $alpha: 0.05);
+    align-items: center;
+
+    .form__img {
+        width: 100%;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+
+        .contact-me {
+            margin-bottom: 30px;
+
+            .form__title {
+                font-size: 35px;
+                margin-bottom: 10px;
+            }
+        }  
+
+        .form__link {
+            text-decoration: none;
+        }
+
+        .form__names {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+
+            &--style {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .form__label {
+            margin: 10px 0px 10px 0px;
+            font-size: 20px;
+        }
+
+        .form__input {
+            padding: 15px 10px;
+            border: none;
+            border-radius: 15px;
+            margin-bottom: 5px;
+            box-shadow: 0 5px 7px 0 rgba(190, 190, 190, 0.23), -3px -3px 2px 0 rgba(205, 205, 205, 0.075);
+        
+            
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        .btn {
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+            background-color: rgba($color: $MainColor, $alpha: 0.8);
+            border-radius: 25px;
+            width: fit-content;
+            padding: 10px 25px 10px 25px;
+            margin-top: 20px;
+            align-self: center;
+        }
+    }
+}
+

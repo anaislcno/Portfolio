@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import Mail from "../../assets/mail.svg"
 import emailjs from '@emailjs/browser';
 import "../Contact/Contact.scss"
 
@@ -17,20 +18,31 @@ function Contact() {
       });
   };
     return (
-      <div>
-        <form ref={form} onSubmit={sendEmail}>
-            <label>Nom</label>
-            <input type="text" name="user_name" />
-            <label>Prénom</label>
-            <input type="text" name="user_firstname" />
-            <label>Email</label>
-            <input type="email" name="user_email" />
-            <label>Sujet</label>
-            <input type="text" name="subject" />
-            <label>Message</label>
-            <textarea name="message" />
-            <input type="submit" value="Send" />
+      <div id="contact" className='contact'>
+        <form className='form' ref={form} onSubmit={sendEmail}>
+          <div className='contact-me'>
+            <h2 className='form__title'>ME CONTACTER</h2>
+            <p>Vous pouvez aussi simplement m'envoyer un mail <a className='form__link' href='mailto:anaislcno@gmail.com'>ici</a></p>
+          </div>
+          <div className='form__names'>
+            <div className='form__names--style'>
+              <label className='form__label '>Nom</label>
+              <input className='form__input' type="text" name="user_name" placeholder='Nom' />
+            </div>
+            <div className='form__names--style'>
+              <label className='form__label'>Prénom</label>
+              <input className='form__input' type="text" name="user_firstname" placeholder='Prénom'/>
+            </div>
+          </div>
+            <label className='form__label'>Email</label>
+            <input className='form__input' type="email" name="user_email" placeholder='unesuperadresse@gmail.com'/>
+            <label className='form__label'>Sujet</label>
+            <input className='form__input' type="text" name="subject" placeholder='Une super idée' />
+            <label className='form__label'>Message</label>
+            <textarea className='form__input' name="message" placeholder='Une super idée avec plus de détails' />
+            <input className='btn' type="submit" value="Envoyer" />
         </form>
+        <img className='form__img' src={Mail} alt='Mailbox'></img>
       </div>
     )
   }
