@@ -4,7 +4,7 @@ $BackColor : #F8C69D;
 $DarkColor : #A45E56;
 
 .contact {
-    color: $DarkColor;
+    color: $MainColor;
     font-weight: 400;
     padding: 50px 150px 50px 150px ;
     display: grid;
@@ -57,6 +57,9 @@ $DarkColor : #A45E56;
             margin-bottom: 5px;
             box-shadow: 0 5px 7px 0 rgba(190, 190, 190, 0.23), -3px -3px 2px 0 rgba(205, 205, 205, 0.075);
         
+            &:focus-visible {
+               outline-color: $DarkColor;
+            }
             
         }
 

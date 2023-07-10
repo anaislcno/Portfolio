@@ -5,6 +5,7 @@ $DarkColor : #A45E56;
 
 .about {
     color: $MainColor;
+    // background-color: rgba($color: $BackColor, $alpha: 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;

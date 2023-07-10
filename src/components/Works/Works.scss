@@ -1,24 +1,77 @@
+$MainColor : #C06D77;
+$SecondColor : white;
+$BackColor : #F8C69D;
+$DarkColor : #A45E56;
 
+.works {
+    color: $MainColor;
+    display: flex;
+    background-color: rgba($color: $BackColor, $alpha: 0.05);
+    padding: 50px 0px 50px 0px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
 
-    .works {
-        // background-color: rgba($color: white, $alpha: 0.5);
-        // border-radius: 30%;
-        color: black;
-        display: flex;
-        flex-direction: column;
+    &__title {
+        margin-bottom: 30px;
+        font-weight: 400;
+        font-size: 35px;
+    }
+
+    .project {
+        max-width: 75%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
         align-items: center;
-        text-align: center;
-        font-size: 18px;
+        background-color: rgba($color: $BackColor, $alpha: 0.2);
+        border-radius: 25px;
+        padding: 20px 50px 20px 50px;
+        margin: 15px auto;
 
-        .works__title {
-            margin-top: 20px;
-            font-weight: 400;
-            font-size: 35px;
+        &__infos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+
+            &--link {
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+                align-items: end;
+            }
+        }
+        
+        &__description {
+            font-size: 15px;
         }
 
-        .works__text {
-            margin: 50px 0px 50px 0px;
-            width: 75%;
-            line-height: 25px;
+        &__img {
+            max-width: 300px;
+        }
+
+        &__technos {
+            margin-top: 10px;
+        
+            &--tag {
+                margin-right: 5px;
+                list-style-type: none;
+                background-color: rgba($color: $MainColor, $alpha: 0.8);
+                border: 1.5px solid white;
+                color: white;
+                padding: 0.3125rem 1rem 0.25rem;
+                border-radius: 15px;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+
+        .icon {
+            color: $DarkColor;
+            font-size: 25px;
         }
     }
+    
+}

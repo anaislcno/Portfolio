@@ -27,19 +27,19 @@ function Contact() {
           <div className='form__names'>
             <div className='form__names--style'>
               <label className='form__label '>Nom</label>
-              <input className='form__input' type="text" name="user_name" placeholder='Nom' />
+              <input className='form__input' type="text" name="user_name" placeholder='Nom' required />
             </div>
             <div className='form__names--style'>
               <label className='form__label'>Prénom</label>
-              <input className='form__input' type="text" name="user_firstname" placeholder='Prénom'/>
+              <input className='form__input' type="text" name="user_firstname" placeholder='Prénom' required/>
             </div>
           </div>
             <label className='form__label'>Email</label>
-            <input className='form__input' type="email" name="user_email" placeholder='unesuperadresse@gmail.com'/>
+            <input className='form__input' type="email" name="user_email" placeholder='unesuperadresse@gmail.com' required/>
             <label className='form__label'>Sujet</label>
-            <input className='form__input' type="text" name="subject" placeholder='Une super idée' />
+            <input className='form__input' type="text" name="subject" placeholder='Une super idée' required/>
             <label className='form__label'>Message</label>
-            <textarea className='form__input' name="message" placeholder='Une super idée avec plus de détails' />
+            <textarea className='form__input' name="message" placeholder='Une super idée avec plus de détails' required/>
             <input className='btn' type="submit" value="Envoyer" />
         </form>
         <img className='form__img' src={Mail} alt='Mailbox'></img>
