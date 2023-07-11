@@ -25,7 +25,6 @@ function Works() {
                 </a>
               </div>
               <p>{year}</p>
-              <h4>Description du projet</h4>
               <p className='project__description'>{description}</p>
               <div className="project__technos">
                 {technos.map((tag, id) => (
