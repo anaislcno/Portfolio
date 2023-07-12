@@ -3,6 +3,11 @@ $SecondColor : white;
 $BackColor : #F8C69D;
 $DarkColor : #A45E56;
 
+
+body {
+    background-color: rgba($color: $BackColor, $alpha: 0.08);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;

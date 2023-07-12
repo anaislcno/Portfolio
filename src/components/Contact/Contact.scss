@@ -55,6 +55,11 @@ $DarkColor : #A45E56;
 
         .form__link {
             text-decoration: none;
+            color: #74413b;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         .form__names {

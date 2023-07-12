@@ -22,7 +22,7 @@ function Contact() {
         <form className='form' ref={form} onSubmit={sendEmail}>
           <div className='contact-me'>
             <h2 className='form__title'>ME CONTACTER</h2>
-            <p>Vous pouvez aussi simplement m'envoyer un mail <a className='form__link' href='mailto:anaislcno@gmail.com'>ici</a></p>
+            <p>Vous pouvez aussi simplement m'envoyer un mail à cette adresse: <a className='form__link' href='mailto:anaislcno@gmail.com'>anaislcno@gmail.com</a></p>
           </div>
           <div className='form__names'>
             <div className='form__names--style'>
