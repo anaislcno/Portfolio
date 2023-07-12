@@ -44,12 +44,9 @@ $DarkColor : #A45E56;
             margin-bottom: 30px;
 
             .form__title {
-                font-size: 35px;
+                // font-size: 35px;
+                font-size: clamp(1.5625rem, 1.3384rem + 0.9434vw, 2.1875rem);
                 margin-bottom: 10px;
-
-                @media screen and (max-width: 768px) {
-                    font-size: 25px;
-                }
             }
         }  
 

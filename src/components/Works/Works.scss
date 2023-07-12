@@ -13,21 +13,41 @@ $DarkColor : #A45E56;
     text-align: center;
     font-size: 18px;
 
+    @media screen and (max-width: 768px) {
+        padding: 50px 0px 30px 0px;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 50px 0px 10px 0px;
+    }
+
     &__title {
         margin-bottom: 30px;
         font-weight: 400;
-        font-size: 35px;
+        // font-size: 35px;
+        font-size: clamp(1.5625rem, 1.3384rem + 0.9434vw, 2.1875rem);
     }
 
     .project {
         max-width: 75%;
         display: flex;
-        gap: 100px;
+        gap: 50px;
         align-items: center;
         background-color: rgba($color: $BackColor, $alpha: 0.2);
         border-radius: 25px;
         padding: 20px 50px 20px 50px;
         margin: 15px auto;
+
+        @media screen and (max-width: 1000px) {
+            padding: 20px 40px 20px 40px;
+            max-width: 85%;
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            max-width: 75%;
+            gap: 15px;
+        }
 
         &__infos {
             display: flex;
@@ -39,16 +59,26 @@ $DarkColor : #A45E56;
                 display: flex;
                 flex-direction: row;
                 gap: 15px;
-                align-items: end;
+                align-items: center;
             }
+        }
+
+        &__title{
+            // font-size: 25px;
+            font-size: clamp(1.125rem, 0.9682rem + 0.6604vw, 1.5625rem);
         }
         
         &__description {
-            font-size: 15px;
+            // font-size: 18px;
+            font-size: clamp(0.9375rem, 0.8703rem + 0.283vw, 1.125rem);
         }
 
         &__img {
             max-width: 300px;
+
+            @media screen and (max-width: 1000px) {
+                max-width: 250px;
+            }
         }
 
         &__technos {

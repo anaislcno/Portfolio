@@ -11,10 +11,11 @@ $DarkColor : #A45E56;
     text-align: center;
     font-size: 18px;
 
-    .about__title {
+    &__title {
         margin-top: 20px;
         font-weight: 400;
-        font-size: 35px;
+        // font-size: 35px;
+        font-size: clamp(1.5625rem, 1.3384rem + 0.9434vw, 2.1875rem);
 
         &--comp{
             color: white;
@@ -22,10 +23,16 @@ $DarkColor : #A45E56;
         }
     }
 
-    .about__text {
+    &__text {
         margin: 50px 0px 50px 0px;
         width: 75%;
         line-height: 25px;
+        font-size: clamp(0.9375rem, 0.8703rem + 0.283vw, 1.125rem);
+
+        @media screen and (max-width: 768px) {
+            width: 85%;
+            margin: 50px 0px 20px 0px;
+        }
     }
 }
 
