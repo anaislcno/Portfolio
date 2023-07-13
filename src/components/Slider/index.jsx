@@ -41,7 +41,7 @@ function CompetencesSlider() {
   };
 
   const [cardIndex, setImageIndex] = useState(0);
-  const small = window.matchMedia('(max-width: 768px)');
+  const small = window.matchMedia('(max-width: 920px)');
 
   const settings = {
     infinite: true,
@@ -52,6 +52,7 @@ function CompetencesSlider() {
     centerPadding: 0,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    dots: true,
     beforeChange: (current, next) => setImageIndex(next),
   };
 

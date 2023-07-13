@@ -3,16 +3,16 @@ import { NavLink } from 'react-router-dom'
 import MediaQuery from 'react-responsive'
 import Logo from '../../assets/logo.svg'
 import '../Header/Header.scss'
-import { FaTimes, FaArrowDown } from "react-icons/fa";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 function Header() {
 
   const [open, setOpen] = useState(false);
-  const [icon, setIcon] = useState(FaArrowDown)
+  const [icon, setIcon] = useState(AiOutlineMenu)
 
   const toggle = () => {
       setOpen(!open);
-      setIcon(open ? FaArrowDown : FaTimes);
+      setIcon(open ? AiOutlineMenu : AiOutlineClose);
     };
 
   return (
@@ -38,14 +38,12 @@ function Header() {
               <span className='collapse__icon'>{icon}</span>
             </button>
             {open && (
-              <div className="collapse__text">
                 <nav className='navbar--small'>
-                    <a href='#about' className='navbar__link--small'>À PROPOS</a>
-                    <a href='#competences' className='navbar__link--small'>COMPÉTENCES</a>
-                    <a href='#works' className='navbar__link--small'>RÉALISATIONS</a>
-                    <a href='#contact' className='navbar__link--small'>CONTACT</a>
+                    <a onClick={toggle} href='#about' className='navbar__link--small'>À PROPOS</a>
+                    <a onClick={toggle} href='#competences' className='navbar__link--small'>COMPÉTENCES</a>
+                    <a onClick={toggle} href='#works' className='navbar__link--small'>RÉALISATIONS</a>
+                    <a onClick={toggle} href='#contact' className='navbar__link--small'>CONTACT</a>
                   </nav>
-              </div>
             )}
           </div>
         )}

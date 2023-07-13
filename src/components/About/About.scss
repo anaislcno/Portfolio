@@ -17,9 +17,17 @@ $DarkColor : #A45E56;
         // font-size: 35px;
         font-size: clamp(1.5625rem, 1.3384rem + 0.9434vw, 2.1875rem);
 
+        @media screen and (max-width: 768px) {
+            margin-top: 0;
+          }
+
         &--comp{
             color: white;
             margin-bottom: 30px;
+
+            @media screen and (max-width: 768px) {
+                margin-bottom: 20px;
+              }
         }
     }
 
@@ -38,6 +46,7 @@ $DarkColor : #A45E56;
 
 .container__wave {
     max-width: 100%;
+    width: 100%;
     background-image: url(../../assets/background2.png);
     background-size: cover;
 

@@ -13,17 +13,30 @@ $DarkColor : #A45E56;
     width: 300px;
     color: $DarkColor;
 
-    .card__title {
+    @media screen and (max-width: 480px) {
+        width: 250px;
+        height: 320px;
+        margin: auto;
+      }
+
+    &__title {
         font-weight: 400;
         margin-bottom: 10px;
+
+        @media screen and (max-width: 480px) {
+            font-size: 22px;
+          }
     }
 
-    .card__text {
+    &__text {
         margin-top: 10px;
+
+        @media screen and (max-width: 480px) {
+            font-size: 20px;
+          }
     }
 
-    .card__img {
-        // width: 200px;
+    &__img {
         height: 180px;
     }
 
@@ -32,6 +45,10 @@ $DarkColor : #A45E56;
         flex-flow: row wrap;
         justify-content: center;
         margin-top: 20px;
+
+        @media screen and (max-width: 480px) {
+            margin-top: 15px;
+          }
 
         .techno__item {
             list-style-type: none;
@@ -42,8 +59,12 @@ $DarkColor : #A45E56;
             margin-right: 6px;
             border-radius: 15px;
             font-size: 1rem;
-            font-weight: 500;
             margin-bottom: 10px;
+
+            @media screen and (max-width: 480px) {
+                font-size: 15px;
+                padding-top: 5px;
+              }
         }
     }
 }

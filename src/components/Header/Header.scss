@@ -3,6 +3,10 @@ $SecondColor : white;
 $BackColor : #F8C69D;
 $DarkColor : #A45E56;
 
+body:has(.navbar--small) {
+    overflow: hidden;
+}
+ 
 .header {
 
     padding: 10px 100px 10px 100px;
@@ -10,8 +14,16 @@ $DarkColor : #A45E56;
     max-width: 100%;
 
     @media screen and (max-width: 1000px) {
-        padding: 10px 75px 10px 75px;
+        padding: 10px 75px;
         font-size: 18px;
+    } 
+
+    @media screen and (max-width: 768px) {
+        padding: 10px 50px;
+    } 
+
+    @media screen and (max-width: 480px) {
+        padding: 10px 25px;
     } 
 
     &__border {
@@ -40,13 +52,12 @@ $DarkColor : #A45E56;
 }
 
 #root:has(.error404) {
-
-.header__border {
-    border-bottom: 2px solid #f8c69d;
-}
-    .navbar__link {
-        color: #f8c69d;
+    .header__border {
+        border-bottom: 2px solid #f8c69d;
     }
+        .navbar__link {
+            color: #f8c69d;
+        }
 }
 
 .collapse {
@@ -54,14 +65,14 @@ $DarkColor : #A45E56;
     flex-direction: row-reverse;
 
     &__btn {
-        height: 22px;
+        height: 10px;
         position: relative;
         border: none;
         background: none;
     }
 
     &__icon {
-        font-size: 25px;
+        font-size: 30px;
         color: white;
     }
 
@@ -74,7 +85,7 @@ $DarkColor : #A45E56;
         right: 0;
         left: 0;
         padding: 20px;
-        background-color: $DarkColor;
+        backdrop-filter: blur(10px);
         z-index: 2;
         height: 100vh;
         transition: height 0.2s linear;
