@@ -4,6 +4,11 @@
     font-size: 20px;
     max-width: 100%;
 
+    @media screen and (max-width: 1000px) {
+        padding: 10px 75px 10px 75px;
+        font-size: 18px;
+    } 
+
     .header__border {
         display: flex;
         align-items: center;
@@ -15,21 +20,12 @@
     .header__logo {
         height: 50px;
     }
-
-    @media screen and (max-width: 768px) {
-        margin: 10px 20px 0px 20px;
-        font-size: 12px;
-    }
 }
 
 .navbar {
     display: flex;
     justify-content: space-around;
     gap: 40px;
-
-    @media screen and (max-width: 768px) {
-        gap: 10px;
-    }
 
     .navbar__link {
         text-decoration: none;

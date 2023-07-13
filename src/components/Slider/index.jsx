@@ -41,6 +41,7 @@ function CompetencesSlider() {
   };
 
   const [cardIndex, setImageIndex] = useState(0);
+  const small = window.matchMedia('(max-width: 768px)');
 
   const settings = {
     infinite: true,
@@ -54,12 +55,15 @@ function CompetencesSlider() {
     beforeChange: (current, next) => setImageIndex(next),
   };
 
+  if (small.matches) {
+    settings.slidesToShow = 1
+  }
+
   return (
-    <div className="App">
+    <div className="slider__container">
       <Slider {...settings}>
         {cards.map((card, idx) => (
         <div className="card__container">
-          {/* <h3>{card.title}</h3> */}
           <div className={idx === cardIndex ? "slide activeSlide" : "slide"} key={idx}>
             {card.component}
           </div>

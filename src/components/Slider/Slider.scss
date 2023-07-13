@@ -1,27 +1,37 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-.App {
+.slider__container {
   width: 60%;
   margin: auto;
 //   margin: 10rem auto;
 //   height: 500px;
-}
 
-.slide img {
-  width: 20rem;
-  margin: 0 auto;
-}
+  .card__container {
+    padding: 20px 0px;
+    margin: 20px 0px;
 
-.slide {
-  transform: scale(0.3);
-  transition: transform 300ms;
-  opacity: 0.7;
-}
+    .slide img {
+      width: 70%;
+      margin: 0 auto;
 
-.activeSlide {
-  transform: scale(1.1);
-  opacity: 1;
+      @media screen and (max-width: 768px) {
+        width: 60%;
+        margin: 50px 0px 20px 0px;
+      }
+    }
+    
+    .slide {
+      transform: scale(0.3);
+      transition: transform 300ms;
+      opacity: 0.7;
+    }
+    
+    .activeSlide {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
 }
 
 .arrow {
@@ -36,14 +46,14 @@
   height: 25px;
   padding: 3px;
   width: 25px;
+
+  &:hover {
+    background-color: rgba($color: white, $alpha: 0.2);
+  }
 }
 
 .arrow svg {
   transition: color 300ms;
-}
-
-.arrow:hover {
-  background-color: rgba($color: white, $alpha: 0.2);
 }
 
 .next {
@@ -54,9 +64,4 @@
 .prev {
   left: 0%;
   top: 50%;
-}
-
-.card__container {
-  padding: 20px 0px;
-  margin: 20px 0px;
 }
