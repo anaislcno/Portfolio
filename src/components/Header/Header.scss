@@ -1,3 +1,8 @@
+$MainColor : #C06D77;
+$SecondColor : white;
+$BackColor : #F8C69D;
+$DarkColor : #A45E56;
+
 .header {
 
     padding: 10px 100px 10px 100px;
@@ -9,7 +14,7 @@
         font-size: 18px;
     } 
 
-    .header__border {
+    &__border {
         display: flex;
         align-items: center;
         padding-bottom: 5px;
@@ -17,7 +22,7 @@
         border-bottom: 1px solid white;
     }
 
-    .header__logo {
+    &__logo {
         height: 50px;
     }
 }
@@ -27,7 +32,7 @@
     justify-content: space-around;
     gap: 40px;
 
-    .navbar__link {
+    &__link {
         text-decoration: none;
         color: white;
         font-weight: 400;
@@ -41,5 +46,44 @@
 }
     .navbar__link {
         color: #f8c69d;
+    }
+}
+
+.collapse {
+    display: flex;
+    flex-direction: row-reverse;
+
+    &__btn {
+        height: 22px;
+        position: relative;
+        border: none;
+        background: none;
+    }
+
+    &__icon {
+        font-size: 25px;
+        color: white;
+    }
+
+    .navbar--small {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        left: 0;
+        padding: 20px;
+        background-color: $DarkColor;
+        z-index: 2;
+        height: 100vh;
+        transition: height 0.2s linear;
+        align-items: center;
+
+        .navbar__link--small {
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+        }
     }
 }

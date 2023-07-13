@@ -33,8 +33,8 @@ function Header() {
       </MediaQuery>
       <MediaQuery maxWidth={768}>
         {matches => matches && (
-          <nav className='navbar'>
-            <button className='collaspe__btn' onClick={toggle}>
+          <div className='collapse'>
+            <button className='collapse__btn' onClick={toggle}>
               <span className='collapse__icon'>{icon}</span>
             </button>
             {open && (
@@ -47,7 +47,7 @@ function Header() {
                   </nav>
               </div>
             )}
-          </nav>
+          </div>
         )}
       </MediaQuery>
       </div>
