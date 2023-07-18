@@ -1,0 +1,51 @@
+$MainColor: #c06d77;
+$SecondColor: white;
+$BackColor: #f8c69d;
+$DarkColor: #a45e56;
+$Bonus: #87313f;
+
+.top__btn {
+  position: relative;
+}
+.icon__position {
+  position: fixed;
+  bottom: 40px;
+  right: 25px;
+  z-index: 20;
+}
+.icon__style {
+  background-color: $MainColor;
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  color: white;
+  cursor: pointer;
+  animation: movebtn 3s ease-in-out infinite;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    animation: none;
+    background: white;
+    color: $MainColor;
+    border: 1px solid $MainColor;
+  }
+}
+
+@keyframes movebtn {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

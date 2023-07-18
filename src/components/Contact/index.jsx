@@ -132,7 +132,7 @@ function Contact() {
         <input className="btn" type="submit" value="Envoyer" />
         {Object.keys(formErrors).length === 0 && isSubmit ? <div className="success">Votre message à bien été envoyé</div> : <></>}
       </form>
-      <img className="form__img" src={Mail} alt="Mailbox"></img>
+      <img loading="lazy" className="form__img" src={Mail} alt="Mailbox"></img>
     </div>
   );
 }
