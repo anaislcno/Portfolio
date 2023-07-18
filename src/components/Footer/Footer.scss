@@ -1,39 +1,39 @@
-$MainColor : #C06D77;
-$SecondColor : white;
-$BackColor : #F8C69D;
-$DarkColor : #A45E56;
+$MainColor: #c06d77;
+$SecondColor: white;
+$BackColor: #f8c69d;
+$DarkColor: #a45e56;
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: $BackColor, $alpha: 0.8);
+  gap: 10px;
+  color: white;
+  max-width: 100%;
+  height: 150px;
+
+  &__icons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color:rgba($color: $BackColor, $alpha: 0.8);
-    gap: 10px;
-    color: white;
-    max-width: 100%;
-    height: 150px;
+    align-items: end;
+    gap: 5px;
 
-    &__icons {
-        display: flex;
-        align-items:end;
-        gap: 5px;
-
-        .icon {
-            color: white;
-            font-size: 30px;
-        }
-
-        .icon__logo {
-            margin-left: -5px;
-        }
+    .icon {
+      color: white;
+      font-size: 30px;
     }
 
-    &__text {
-        font-size: 20px;
-
-        @media screen and (max-width: 768px) {
-            font-size: 18px;
-        }
+    .icon__logo {
+      margin-left: -5px;
     }
+  }
+
+  &__text {
+    font-size: 18px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 15px;
+    }
+  }
 }
