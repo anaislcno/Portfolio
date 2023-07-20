@@ -1,7 +1,8 @@
 import "./Slider.scss";
 import { useState } from "react";
 import Slider from "react-slick";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+// import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { GiChainedArrowHeads } from "react-icons/gi";
 import { FrontCard, BackCard, ToolsCard, SeoCard } from "../Cards";
 
 const cards = [
@@ -27,7 +28,7 @@ function CompetencesSlider() {
   const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick}>
-        <FaArrowRight />
+        <GiChainedArrowHeads />
       </div>
     );
   };
@@ -35,13 +36,13 @@ function CompetencesSlider() {
   const PrevArrow = ({ onClick }) => {
     return (
       <div className="arrow prev" onClick={onClick}>
-        <FaArrowLeft />
+        <GiChainedArrowHeads />
       </div>
     );
   };
 
   const [cardIndex, setImageIndex] = useState(0);
-  const small = window.matchMedia('(max-width: 920px)');
+  const small = window.matchMedia("(max-width: 920px)");
 
   const settings = {
     infinite: true,
@@ -57,18 +58,18 @@ function CompetencesSlider() {
   };
 
   if (small.matches) {
-    settings.slidesToShow = 1
+    settings.slidesToShow = 1;
   }
 
   return (
     <div className="slider__container">
       <Slider {...settings}>
         {cards.map((card, idx) => (
-        <div className="card__container">
-          <div className={idx === cardIndex ? "slide activeSlide" : "slide"} key={idx}>
-            {card.component}
+          <div className="card__container">
+            <div className={idx === cardIndex ? "slide activeSlide" : "slide"} key={idx}>
+              {card.component}
+            </div>
           </div>
-        </div>
         ))}
       </Slider>
     </div>

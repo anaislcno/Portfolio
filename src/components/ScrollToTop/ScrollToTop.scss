@@ -21,7 +21,7 @@ $Bonus: #87313f;
   width: 40px;
   color: #fef7f2;
   cursor: pointer;
-  animation: movebtn 3s ease-in-out infinite;
+  animation: movebtn 3s linear infinite;
   transition: all 0.5s ease-in-out;
 
   &:hover {

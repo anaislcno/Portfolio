@@ -13,7 +13,7 @@ function Contact() {
         console.log(result.text);
         console.log("message envoyé");
         setIsSubmit(true);
-        resetForm();
+        // resetForm();
       },
       (error) => {
         console.error(error.text);
@@ -44,6 +44,7 @@ function Contact() {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formValues);
     }
+    //déjà ici pq j'ai jamais pu faire pareil et lmettre que formErrors?
   }, [formErrors, formValues, isSubmit]);
 
   const onAnimationEnd = () => {
@@ -81,6 +82,7 @@ function Contact() {
     handleSubmit(e);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       sendEmail();
+      resetForm();
     }
   };
 
