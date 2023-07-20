@@ -2,6 +2,7 @@ $MainColor: #c06d77;
 $SecondColor: white;
 $BackColor: #f8c69d;
 $DarkColor: #a45e56;
+$shake-intensity: 1%;
 
 .contact {
   color: $MainColor;
@@ -113,6 +114,21 @@ $DarkColor: #a45e56;
       padding: 10px 25px 10px 25px;
       margin-top: 20px;
       align-self: center;
+
+      // Invalid form animation
+      &.invalid {
+        animation: shake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 2;
+      }
+
+      @keyframes shake {
+        25% {
+          transform: translateX($shake-intensity);
+        }
+        75% {
+          transform: translateX($shake-intensity * -1);
+        }
+      }
+      //
 
       @media screen and (max-width: 768px) {
         font-size: 18px;

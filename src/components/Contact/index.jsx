@@ -12,9 +12,11 @@ function Contact() {
       (result) => {
         console.log(result.text);
         console.log("message envoyé");
+        setIsSubmit(true);
+        resetForm();
       },
       (error) => {
-        console.log(error.text);
+        console.error(error.text);
       },
     );
   };
@@ -24,6 +26,7 @@ function Contact() {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const [isAnimRunning, setIsAnimRunning] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,9 +34,9 @@ function Contact() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+    setIsAnimRunning(true);
   };
 
   useEffect(() => {
@@ -42,6 +45,10 @@ function Contact() {
       console.log(formValues);
     }
   }, [formErrors, formValues, isSubmit]);
+
+  const onAnimationEnd = () => {
+    setIsAnimRunning(false);
+  };
 
   const validate = (values) => {
     const errors = {};
@@ -70,10 +77,21 @@ function Contact() {
 
   // Check validation and run emailJs if validation is ok
   const runBoth = (e) => {
+    e.preventDefault();
     handleSubmit(e);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       sendEmail();
     }
+  };
+
+  // For animation
+  const isFormInvalid = Object.keys(formErrors).length !== 0;
+
+  // Reset form after sumbitting
+  const resetForm = () => {
+    setFormValues(initialValues);
+    setIsSubmit(false);
+    setFormErrors({});
   };
 
   return (
@@ -129,7 +147,7 @@ function Contact() {
           placeholder="Une super idée avec plus de détails"
         />
         <p className="form__error">{formErrors.message}</p>
-        <input className="btn" type="submit" value="Envoyer" />
+        <input className={`btn ${isFormInvalid && isAnimRunning ? "invalid" : ""}`} type="submit" value="Envoyer" onAnimationEnd={onAnimationEnd} />
         {Object.keys(formErrors).length === 0 && isSubmit ? <div className="success">Votre message à bien été envoyé</div> : <></>}
       </form>
       <img loading="lazy" className="form__img" src={Mail} alt="Mailbox"></img>

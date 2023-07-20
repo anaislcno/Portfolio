@@ -15,18 +15,18 @@ $Bonus: #87313f;
 }
 .icon__style {
   background-color: $MainColor;
-  border: 1px solid white;
+  border: 1px solid #fef7f2;
   border-radius: 50%;
   height: 40px;
   width: 40px;
-  color: white;
+  color: #fef7f2;
   cursor: pointer;
   animation: movebtn 3s ease-in-out infinite;
   transition: all 0.5s ease-in-out;
 
   &:hover {
     animation: none;
-    background: white;
+    background: #fef7f2;
     color: $MainColor;
     border: 1px solid $MainColor;
   }
