@@ -4,8 +4,8 @@ import "./About.scss";
 function About() {
   return (
     <div id="about" className="about">
-      <h2 className="about__title">À PROPOS</h2>
-      <p className="about__text">
+      <h2 className="about__title appear">À PROPOS</h2>
+      <p className="about__text appear__reverse">
         Après une licence en géographie, je suis partie à l'étranger notamment pour chercher un métier qui me correspondrait mieux. J'en suis revenue
         avec le projet de devenir développeuse front-end. <br />
         <br />

@@ -1,60 +1,85 @@
-$MainColor : #C06D77;
-$SecondColor : white;
-$BackColor : #F8C69D;
-$DarkColor : #A45E56;
+$MainColor: #c06d77;
+$SecondColor: white;
+$BackColor: #f8c69d;
+$DarkColor: #a45e56;
 
 .about {
-    color: $MainColor;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 18px;
+  color: $MainColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
 
-    &__title {
-        margin-top: 20px;
-        font-weight: 400;
-        // font-size: 35px;
-        font-size: clamp(1.5625rem, 1.3384rem + 0.9434vw, 2.1875rem);
+  &__title {
+    margin-top: 20px;
+    font-weight: 400;
+    // font-size: 35px;
+    font-size: clamp(1.5625rem, 1.3384rem + 0.9434vw, 2.1875rem);
 
-        @media screen and (max-width: 768px) {
-            margin-top: 0;
-          }
-
-        &--comp{
-            color: white;
-            margin-bottom: 30px;
-
-            @media screen and (max-width: 768px) {
-                margin-bottom: 20px;
-              }
-        }
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
     }
 
-    &__text {
-        margin: 50px 0px 50px 0px;
-        width: 75%;
-        line-height: 25px;
-        font-size: clamp(0.9375rem, 0.8703rem + 0.283vw, 1.125rem);
+    &--comp {
+      color: white;
+      margin-bottom: 30px;
 
-        @media screen and (max-width: 768px) {
-            width: 85%;
-            margin: 50px 0px 20px 0px;
-        }
+      @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+      }
     }
+  }
+
+  &__text {
+    margin: 50px 0px 50px 0px;
+    width: 75%;
+    line-height: 25px;
+    font-size: clamp(0.9375rem, 0.8703rem + 0.283vw, 1.125rem);
+
+    @media screen and (max-width: 768px) {
+      width: 85%;
+      margin: 50px 0px 20px 0px;
+    }
+  }
 }
 
 .container__wave {
-    max-width: 100%;
-    width: 100%;
-    background-image: url(../../assets/background2.png);
-    background-size: cover;
+  max-width: 100%;
+  width: 100%;
+  background-image: url(../../assets/background2.png);
+  background-size: cover;
 
-    --mask:
-    radial-gradient(178.89px at 50% 240.00px,#000 99%,#0000 101%) calc(50% - 160px) 0/320px 100%,
-    radial-gradient(178.89px at 50% -160px,#0000 99%,#000 101%) 50% 80px/320px 100% repeat-x;
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
+  --mask: radial-gradient(178.89px at 50% 240px, #000 99%, #0000 101%) calc(50% - 160px) 0/320px 100%,
+    radial-gradient(178.89px at 50% -160px, #0000 99%, #000 101%) 50% 80px/320px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 
-    padding: 140px 0px 50px 0px;
+  padding: 140px 0px 50px 0px;
 }
+
+// .appear {
+//   animation: 5s appear ease-out;
+
+//   &__reverse {
+//     animation: 8s appear ease-out;
+//   }
+// }
+
+// @keyframes appear {
+//   0% {
+//     opacity: 0;
+//     transform: translateX(80%);
+//   }
+//   20% {
+//     opacity: 0;
+//   }
+//   50% {
+//     opacity: 1;
+//     transform: translateX(0%);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateX(0%);
+//   }
+// }
