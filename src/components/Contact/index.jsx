@@ -8,12 +8,11 @@ function Contact() {
   const form = useRef();
 
   const sendEmail = (e) => {
+    setIsSubmit(true);
+
     emailjs.sendForm("service_yhkbcmq", "template_p54cbvr", form.current, "dxGqKN7eFB6sic8IB").then(
-      (result) => {
-        console.log(result.text);
-        console.log("message envoyé");
-        setIsSubmit(true);
-        // resetForm();
+      () => {
+        resetForm();
       },
       (error) => {
         console.error(error.text);
@@ -24,8 +23,9 @@ function Contact() {
   // Manual form validation
   const initialValues = { user_name: "", user_firstname: "", user_email: "", subject: "", message: "" };
   const [formValues, setFormValues] = useState(initialValues);
-  const [formErrors, setFormErrors] = useState({});
+  const [formErrors, setFormErrors] = useState(initialValues);
   const [isSubmit, setIsSubmit] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const [isAnimRunning, setIsAnimRunning] = useState(false);
 
   const handleChange = (e) => {
@@ -34,18 +34,23 @@ function Contact() {
   };
 
   const handleSubmit = (e) => {
-    setFormErrors(validate(formValues));
-    setIsSubmit(true);
-    setIsAnimRunning(true);
-  };
+    let findError = false;
+    const errors = validate(formValues);
 
-  useEffect(() => {
-    console.log(formErrors);
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
-    }
-    //déjà ici pq j'ai jamais pu faire pareil et lmettre que formErrors?
-  }, [formErrors, formValues, isSubmit]);
+    // Add errors messages to from fields if errors
+    setFormErrors(errors);
+
+    // iterate over errors to check if message exist or not
+    // eslint-disable-next-line array-callback-return
+    Object.keys(errors).map((fieldError) => {
+      if (fieldError.length !== 0) {
+        setHasError(true);
+        findError = true;
+      }
+    });
+
+    return findError;
+  };
 
   const onAnimationEnd = () => {
     setIsAnimRunning(false);
@@ -54,6 +59,7 @@ function Contact() {
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,4}$/i;
+
     if (!values.user_name) {
       errors.user_name = "N'oubliez pas votre nom!";
     }
@@ -79,21 +85,21 @@ function Contact() {
   // Check validation and run emailJs if validation is ok
   const runBoth = (e) => {
     e.preventDefault();
-    handleSubmit(e);
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
+    const isFormInvalid = handleSubmit(e);
+
+    if (!isFormInvalid) {
       sendEmail();
-      resetForm();
+    } else {
+      setIsAnimRunning(true);
     }
   };
-
-  // For animation
-  const isFormInvalid = Object.keys(formErrors).length !== 0;
 
   // Reset form after sumbitting
   const resetForm = () => {
     setFormValues(initialValues);
+    setFormErrors(initialValues);
     setIsSubmit(false);
-    setFormErrors({});
+    setHasError(false);
   };
 
   return (
@@ -149,8 +155,9 @@ function Contact() {
           placeholder="Une super idée avec plus de détails"
         />
         <p className="form__error">{formErrors.message}</p>
-        <input className={`btn ${isFormInvalid && isAnimRunning ? "invalid" : ""}`} type="submit" value="Envoyer" onAnimationEnd={onAnimationEnd} />
-        {Object.keys(formErrors).length === 0 && isSubmit ? <div className="success">Votre message à bien été envoyé</div> : <></>}
+
+        <input className={`btn ${hasError && isAnimRunning ? "invalid" : ""}`} type="submit" value="Envoyer" onAnimationEnd={onAnimationEnd} />
+        {isSubmit ? <div className="success">Votre message à bien été envoyé</div> : <></>}
       </form>
       <img loading="lazy" className="form__img" src={Mail} alt="Mailbox"></img>
     </div>
