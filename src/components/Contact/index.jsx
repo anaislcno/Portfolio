@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import Mail from "../../assets/mail.svg";
 import emailjs from "@emailjs/browser";
 import "../Contact/Contact.scss";
