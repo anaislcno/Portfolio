@@ -40,7 +40,7 @@ function Contact() {
     // Add errors messages to from fields if errors
     setFormErrors(errors);
 
-    // iterate over errors to check if message exist or not
+    // Iterate over errors to check if message exist or not
     // eslint-disable-next-line array-callback-return
     Object.keys(errors).map((fieldError) => {
       if (fieldError.length !== 0) {
@@ -61,21 +61,21 @@ function Contact() {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,4}$/i;
 
     if (!values.user_name) {
-      errors.user_name = "N'oubliez pas votre nom!";
+      errors.user_name = "Pensez à mettre votre nom!";
     }
     if (!values.user_firstname) {
-      errors.user_firstname = "N'oubliez pas votre prénom!";
+      errors.user_firstname = "Pensez à mettre votre prénom!";
     }
     if (!values.user_email) {
-      errors.user_email = "N'oubliez pas votre adresse mail!";
+      errors.user_email = "Pensez à mettre votre adresse mail!";
     } else if (!regex.test(values.user_email)) {
       errors.user_email = "Oups, cette adresse mail n'est pas valide";
     }
     if (!values.subject) {
-      errors.subject = "N'oubliez pas me dire de quoi ça parle!";
+      errors.subject = "Dites moi de quoi ça parle!";
     }
     if (!values.message) {
-      errors.message = "N'oubliez pas votre message!";
+      errors.message = "Pensez à me laisser votre message!";
     } else if (values.message.length < 25) {
       errors.message = "Ce message mériterait plus de caractères...(25min)";
     }
