@@ -14,6 +14,8 @@ function Header() {
     setIcon(open ? AiOutlineMenu : AiOutlineClose);
   };
 
+  // ENLEVER LE NAVLINK POUR LE LOGO PCQ EN VRAI C QUE POUR LE 404 MAIS PAR CONTRE TRANSFORMER LES A EN LINK
+
   return (
     <header className="header">
       <div className="header__border">
