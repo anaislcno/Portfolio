@@ -18,7 +18,7 @@ function Header() {
   return (
     <header className={headerClass}>
       <div className="header__border">
-        <img src={Logo} alt="Logo" className="header__logo" />
+        <img src={Logo} alt="Logo illustration" className="header__logo" />
         <MediaQuery minWidth={769}>
           {(matches) =>
             matches && (
@@ -43,7 +43,7 @@ function Header() {
           {(matches) =>
             matches && (
               <div className="collapse">
-                <button className="collapse__btn" onClick={toggle}>
+                <button id="al" className="collapse__btn" onClick={toggle} aria-label="Burger menu">
                   <span className="collapse__icon">{icon}</span>
                 </button>
                 {open && (

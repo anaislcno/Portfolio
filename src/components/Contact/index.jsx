@@ -116,12 +116,24 @@ function Contact() {
         </div>
         <div className="form__names">
           <div className="form__names--style">
-            <label className="form__label ">Nom</label>
-            <input className="form__input" type="text" name="user_name" value={formValues.user_name} onChange={handleChange} placeholder="Nom" />
+            <label for="name" className="form__label ">
+              Nom
+            </label>
+            <input
+              className="form__input"
+              type="text"
+              name="user_name"
+              value={formValues.user_name}
+              onChange={handleChange}
+              placeholder="Nom"
+              id="name"
+            />
             <p className="form__error">{formErrors.user_name}</p>
           </div>
           <div className="form__names--style">
-            <label className="form__label">Prénom</label>
+            <label for="firstname" className="form__label">
+              Prénom
+            </label>
             <input
               className="form__input"
               type="text"
@@ -129,11 +141,14 @@ function Contact() {
               value={formValues.user_firstname}
               onChange={handleChange}
               placeholder="Prénom"
+              id="firstname"
             />
             <p className="form__error">{formErrors.user_firstname}</p>
           </div>
         </div>
-        <label className="form__label">Email</label>
+        <label for="mail" className="form__label">
+          Email
+        </label>
         <input
           className="form__input"
           type="email"
@@ -141,21 +156,34 @@ function Contact() {
           value={formValues.user_email}
           onChange={handleChange}
           placeholder="unesuperadresse@gmail.com"
+          id="mail"
         />
         <p className="form__error">{formErrors.user_email}</p>
-        <label className="form__label">Sujet</label>
-        <input className="form__input" type="text" name="subject" value={formValues.subject} onChange={handleChange} placeholder="Une super idée" />
+        <label for="subject" className="form__label">
+          Sujet
+        </label>
+        <input
+          className="form__input"
+          type="text"
+          name="subject"
+          value={formValues.subject}
+          onChange={handleChange}
+          placeholder="Une super idée"
+          id="subject"
+        />
         <p className="form__error">{formErrors.subject}</p>
-        <label className="form__label">Message</label>
+        <label for="message" className="form__label">
+          Message
+        </label>
         <textarea
           className="form__input"
           name="message"
           value={formValues.message}
           onChange={handleChange}
           placeholder="Une super idée avec plus de détails"
+          id="message"
         />
         <p className="form__error">{formErrors.message}</p>
-
         <input className={`btn ${hasError && isAnimRunning ? "invalid" : ""}`} type="submit" value="Envoyer" onAnimationEnd={onAnimationEnd} />
         {isSubmit ? <div className="success">Votre message à bien été envoyé</div> : <></>}
       </form>

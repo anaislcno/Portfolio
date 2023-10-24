@@ -15,7 +15,7 @@ function Works() {
                 <div className="project__infos--link">
                   <h3 className="project__title">{title}</h3>
                   <a className="icon" href={link} target="_blank" rel="noreferrer" aria-label="Github">
-                    <i class="fab fa-github" />
+                    <i className="fab fa-github" />
                   </a>
                 </div>
                 <p>{year}</p>

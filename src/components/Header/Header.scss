@@ -91,6 +91,7 @@ body:has(.navbar--small) {
     position: relative;
     border: none;
     background: none;
+    cursor: pointer;
   }
 
   &__icon {
