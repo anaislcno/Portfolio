@@ -1,8 +1,7 @@
 import "./Slider.scss";
 import { useState } from "react";
 import Slider from "react-slick";
-// import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import { GiChainedArrowHeads } from "react-icons/gi";
+import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import { FrontCard, BackCard, ToolsCard, SeoCard } from "../Cards";
 
 const cards = [
@@ -28,7 +27,7 @@ function CompetencesSlider() {
   const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick}>
-        <GiChainedArrowHeads />
+        <MdArrowForwardIos />
       </div>
     );
   };
@@ -36,7 +35,7 @@ function CompetencesSlider() {
   const PrevArrow = ({ onClick }) => {
     return (
       <div className="arrow prev" onClick={onClick}>
-        <GiChainedArrowHeads />
+        <MdArrowBackIos />
       </div>
     );
   };

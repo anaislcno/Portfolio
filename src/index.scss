@@ -1,22 +1,23 @@
-$MainColor : #C06D77;
-$SecondColor : white;
-$BackColor : #F8C69D;
-$DarkColor : #A45E56;
-
+$MainColor: #c06d77;
+$SecondColor: white;
+$BackColor: #f8c69d;
+$DarkColor: #a45e56;
 
 body {
-    background-color: rgba($color: $BackColor, $alpha: 0.08);
+  background-color: rgba($color: $BackColor, $alpha: 0.08);
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  scroll-behavior: smooth;
 
-    h1, h2, h3 {
-        font-weight: 400;
-    }
+  h1,
+  h2,
+  h3 {
+    font-weight: 400;
+  }
 }

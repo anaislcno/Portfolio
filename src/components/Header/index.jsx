@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-import { NavLink } from "react-router-dom";
 import MediaQuery from "react-responsive";
 import Logo from "../../assets/logo.svg";
 import "../Header/Header.scss";
@@ -14,14 +13,12 @@ function Header() {
     setIcon(open ? AiOutlineMenu : AiOutlineClose);
   };
 
-  // ENLEVER LE NAVLINK POUR LE LOGO PCQ EN VRAI C QUE POUR LE 404 MAIS PAR CONTRE TRANSFORMER LES A EN LINK
+  const headerClass = `header ${open ? "menu-open" : ""}`;
 
   return (
-    <header className="header">
+    <header className={headerClass}>
       <div className="header__border">
-        <NavLink to="/">
-          <img src={Logo} alt="Logo" className="header__logo" />
-        </NavLink>
+        <img src={Logo} alt="Logo" className="header__logo" />
         <MediaQuery minWidth={769}>
           {(matches) =>
             matches && (

@@ -58,9 +58,9 @@ const SeoCard = () => {
   return (
     <div className="card">
       <h2 className="card__title">SEO</h2>
-      {/* <span class="img-wrapper">
+      <span class="img-wrapper">
         <img className="card__img" src={seoImg} alt="seo illustration" />
-      </span> */}
+      </span>
       <div class="img-wrapper icon seo"></div>
       <h3 className="card__text">Services:</h3>
       <ul className="techno__list">

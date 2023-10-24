@@ -12,6 +12,20 @@ body:has(.navbar--small) {
   font-size: 20px;
   max-width: 100%;
 
+  // ?
+  &.menu-open {
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      backdrop-filter: blur(10px);
+      z-index: -1;
+    }
+  }
+
   @media screen and (max-width: 1000px) {
     padding: 10px 75px;
     font-size: 18px;
@@ -31,10 +45,15 @@ body:has(.navbar--small) {
     padding-bottom: 5px;
     justify-content: space-between;
     border-bottom: 1px solid white;
+
+    @media screen and (max-width: 768px) {
+      padding-bottom: 10px;
+    }
   }
 
   &__logo {
     height: 50px;
+    margin-bottom: 5px;
   }
 }
 
@@ -68,7 +87,7 @@ body:has(.navbar--small) {
   flex-direction: row-reverse;
 
   &__btn {
-    height: 10px;
+    height: 20px;
     position: relative;
     border: none;
     background: none;
@@ -87,7 +106,7 @@ body:has(.navbar--small) {
     top: 70px;
     right: 0;
     left: 0;
-    padding: 20px;
+    padding-top: 45px;
     backdrop-filter: blur(10px);
     z-index: 2;
     height: 100vh;
@@ -99,6 +118,7 @@ body:has(.navbar--small) {
       color: white;
       font-weight: 400;
       transition: transform 400ms;
+
       &:hover {
         transform: scale(1.08);
       }

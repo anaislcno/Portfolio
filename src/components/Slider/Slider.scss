@@ -50,18 +50,10 @@
   position: absolute;
   cursor: pointer;
   z-index: 10;
-  font-size: 35px;
-  // box-shadow: 1px 1px 20px 5px white;
-  // -webkit-box-shadow: 1px 1px 20px 5px white;
-  // -moz-box-shadow: 1px 1px 20px 5px white;
-  // border-radius: 50px;
-  // padding: 3px;
+  font-size: 45px;
+
   height: 25px;
   width: 25px;
-
-  // &:hover {
-  //   background-color: rgba($color: white, $alpha: 0.2);
-  // }
 }
 
 .arrow svg {
@@ -70,11 +62,10 @@
 
 .next {
   right: 0%;
-  top: 50%;
-  transform: rotate(-45deg);
+  top: 45%;
 
   &:hover {
-    transform: scale(1.15) rotate(-45deg);
+    transform: scale(1.15);
   }
 
   @media screen and (max-width: 1000px) {
@@ -92,11 +83,10 @@
 
 .prev {
   left: 0%;
-  top: 50%;
-  transform: rotate(135deg);
+  top: 45%;
 
   &:hover {
-    transform: scale(1.15) rotate(135deg);
+    transform: scale(1.15);
   }
 
   @media screen and (max-width: 1000px) {
