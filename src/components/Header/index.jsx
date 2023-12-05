@@ -21,10 +21,10 @@ function Header() {
       <div className="header__border">
         <div className="header__img">
           <img src={Logo} alt="Logo illustration" className="header__img--logo" />
-          <a className="header__img--icon" href="https://www.linkedin.com/in/lemire-anais/" target="_blank" rel="noreferrer" aria-label="Linkedin">
+          <a className="header__img--icon" href="https://github.com/anaislcno" target="_blank" rel="noreferrer" aria-label="Github">
             <FaGithub />
           </a>
-          <a className="header__img--icon" href="https://github.com/anaislcno" target="_blank" rel="noreferrer" aria-label="Github">
+          <a className="header__img--icon" href="https://www.linkedin.com/in/lemire-anais/" target="_blank" rel="noreferrer" aria-label="Linkedin">
             <FaLinkedin />
           </a>
         </div>

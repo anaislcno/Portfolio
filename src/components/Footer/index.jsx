@@ -8,13 +8,13 @@ function Footer() {
     <footer className="footer">
       <div className="footer__icons">
         <a className="icon" href="https://github.com/anaislcno" target="_blank" rel="noreferrer" aria-label="Github">
-          <FaLinkedin />
+          <FaGithub />
         </a>
         <NavLink to="/">
           <img src={Logo} loading="lazy" alt="Logo illustration" className="icon__logo" />
         </NavLink>
         <a className="icon" href="https://www.linkedin.com/in/lemire-anais/" target="_blank" rel="noreferrer" aria-label="Linkedin">
-          <FaGithub />
+          <FaLinkedin />
         </a>
       </div>
       <p className="footer__text">Réalisé par Anaïs Lemire</p>
