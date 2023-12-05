@@ -3,6 +3,7 @@ import MediaQuery from "react-responsive";
 import Logo from "../../assets/logo.svg";
 import "../Header/Header.scss";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -18,7 +19,15 @@ function Header() {
   return (
     <header className={headerClass}>
       <div className="header__border">
-        <img src={Logo} alt="Logo illustration" className="header__logo" />
+        <div className="header__img">
+          <img src={Logo} alt="Logo illustration" className="header__img--logo" />
+          <a className="header__img--icon" href="https://www.linkedin.com/in/lemire-anais/" target="_blank" rel="noreferrer" aria-label="Linkedin">
+            <FaGithub />
+          </a>
+          <a className="header__img--icon" href="https://github.com/anaislcno" target="_blank" rel="noreferrer" aria-label="Github">
+            <FaLinkedin />
+          </a>
+        </div>
         <MediaQuery minWidth={769}>
           {(matches) =>
             matches && (

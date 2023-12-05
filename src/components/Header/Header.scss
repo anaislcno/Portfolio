@@ -51,9 +51,20 @@ body:has(.navbar--small) {
     }
   }
 
-  &__logo {
-    height: 50px;
-    margin-bottom: 5px;
+  &__img {
+    display: flex;
+    align-items: flex-end;
+
+    &--logo {
+      height: 50px;
+      margin-bottom: 5px;
+    }
+
+    &--icon {
+      color: white;
+      font-size: 25px;
+      margin-right: 5px;
+    }
   }
 }
 
