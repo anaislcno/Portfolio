@@ -5,9 +5,10 @@ export const projectsList = [
     year: "2023",
     image: "/images/kasa.png",
     description:
-      "Projet de formation OpenClassrooms visant à développer le front-end d'un site de location immobilière. Projet nécessitant l'utilisation de composants et de hooks",
+      "Projet de formation visant à développer le front-end d'un site de location immobilière. Réalisé from scratch, il a nécessité l'utilisation de mutliples composants et de hooks. Il est aussi codé en responsive design.",
     technos: ["React", "Scss"],
     link: "https://github.com/anaislcno/Project-Kasa",
+    live: "https://project-kasa-nu.vercel.app/",
   },
 
   {
@@ -16,7 +17,7 @@ export const projectsList = [
     year: "2023",
     image: "/images/sophie.png",
     description:
-      "Projet de formation OpenClassrooms visant à développer le front-end et à dynamiser le site d'une photographe. Implémentation de fonctionnalités (filtres, ajout/suppression de projet, connexion)",
+      "Projet de formation visant à développer le front-end et à dynamiser le site d'une photographe. Implémentation de fonctionnalités (filtres, ajout/suppression de projet dans une modale, authentification).",
     technos: ["HTML", "CSS", "JavaScript"],
     link: "https://github.com/anaislcno/Project-Sophie-Bluel",
   },
@@ -26,10 +27,10 @@ export const projectsList = [
     title: "Frontend Booki",
     year: "2023",
     image: "/images/booki.png",
-    description:
-      "Projet de formation OpenClassrooms visant à créer le front-end pour la vitrine de la plateforme de voyage Booki",
+    description: "Projet de formation visant à créer un site vitrine responsive from scratch pour la plateforme de voyage Booki",
     technos: ["HTML", "CSS"],
     link: "https://github.com/anaislcno/Project-Booki",
+    live: "https://project-booki.vercel.app/",
   },
 
   {
@@ -38,7 +39,7 @@ export const projectsList = [
     year: "2023",
     image: "/images/grimoire.png",
     description:
-      "Projet de formation OpenClassrooms visant à développer le back-end d'un site de notation de livre avec authentification. Construction d'une API, utilisation de la méthode CRUD, utilisaton d'une base de données.",
+      "Projet de formation back-end pour un site de notation de livre. Le site permet une authentification user pour agir sur la bibliothèque. Il comprends aussi la construction d'une API, utilisation de la méthode CRUD, utilisaton d'une base de données.",
     technos: ["Node.js", "MongoDB"],
     link: "https://github.com/anaislcno/Project-Grimoire",
   },

@@ -9,9 +9,11 @@ function Works() {
       <div className="works">
         <h2 className="works__title">RÉALISATIONS</h2>
         <ul className="projects__container">
-          {projectsList.map(({ id, title, image, description, year, link, technos }) => (
+          {projectsList.map(({ id, title, image, description, year, link, technos, live }) => (
             <li key={id} className="project">
-              <img loading="lazy" src={image} className="project__img" alt={`${title} cover`} />
+              <a target="_blank" rel="noreferrer" href={live}>
+                <img loading="lazy" src={image} className="project__img" alt={`${title} cover`} />
+              </a>
               <div className="project__infos">
                 <div className="project__infos--link">
                   <h3 className="project__title">{title}</h3>
